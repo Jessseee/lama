@@ -2,15 +2,13 @@ import logging
 from abc import abstractmethod, ABC
 
 import numpy as np
-import sklearn
-import sklearn.svm
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from joblib import Parallel, delayed
 from scipy import linalg
 
-from models.ade20k import SegmentationModule, NUM_CLASS, segm_options
+from saicinpainting.models.ade20k import SegmentationModule, NUM_CLASS, segm_options
 from .fid.inception import InceptionV3
 from .lpips import PerceptualLoss
 from .ssim import SSIM
